@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-nude: #E8D5C4;
+  --color-cream: #F9F5F2;
+  --color-charcoal: #1A1A1A;
+  --color-gold: #C5A059;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.split-screen-hero {
+  height: calc(100vh - 80px);
+}
+
+.glass-nav {
+  @apply bg-cream/80 backdrop-blur-md border-b border-charcoal/5;
+}
+
+.btn-primary {
+  @apply bg-charcoal text-cream px-8 py-3 rounded-none hover:bg-charcoal/90 transition-all duration-300 uppercase tracking-widest text-xs font-semibold;
+}
+
+.btn-outline {
+  @apply border border-charcoal text-charcoal px-8 py-3 rounded-none hover:bg-charcoal hover:text-cream transition-all duration-300 uppercase tracking-widest text-xs font-semibold;
+}
